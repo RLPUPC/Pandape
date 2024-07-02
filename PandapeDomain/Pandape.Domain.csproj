@@ -6,4 +6,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Pandape.Infrastructure.Domain.Dto\Pandape.Infrastructure.Domain.Dto.csproj" />
+  </ItemGroup>
+
 </Project>

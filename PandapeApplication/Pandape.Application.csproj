@@ -6,4 +6,11 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Pandape.Infrastructure.Database\Pandape.Infrastructure.Database.csproj" />
+    <ProjectReference Include="..\Pandape.Infrastructure.Domain.Dto\Pandape.Infrastructure.Domain.Dto.csproj" />
+    <ProjectReference Include="..\PandapeDomain\Pandape.Domain.csproj" />
+    <ProjectReference Include="..\PandapeWeb\PandapeWeb.csproj" />
+  </ItemGroup>
+
 </Project>
