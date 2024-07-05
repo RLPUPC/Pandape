@@ -1,18 +1,12 @@
-﻿using Pandape.Domain;
-using Pandape.Infrastructure.Domain.Dto;
-using PandapeWeb.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Pandape.Application
+﻿namespace Pandape.Application
 {
     public interface ICandidateManager
     {
-        CandidateDto CreateCandidate(CreateCanditeViewModel newCandidate);
-        CandidateDto UpdateCandidate();
-        void DeleteCandidate(Candidate candidate);
+        IEnumerable<CandidateDto> GetCandidates();
+        CandidateDto GetCandidateById(int idCandidate);
+        CandidateDto CreateCandidate(CreateCandidateVO newCandidate);
+        CandidateDto UpdateCandidate(int idCandite, UpdateCandidateVO updateCandidate);
+        void DeleteCandidate(int idCandite);
+        CandidateExperienceDto GetExpereincesByCandidate(int idCandidate);
     }
 }

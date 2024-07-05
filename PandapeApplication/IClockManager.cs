@@ -1,13 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿namespace Pandape.Application;
 
-namespace Pandape.Application
+public interface IClockManager
 {
-    public interface IClockManager
-    {
-        DateTime GetCurrentUtc();
-    }
+    DateTime GetCurrentUtc();
 }

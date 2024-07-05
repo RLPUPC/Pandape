@@ -2,6 +2,7 @@
 using Pandape.Infrastructure.Database;
 using Pandape.Infrastructure.Database.Repository;
 using Pandape.Infrastructure.Database.TypeConfigurations;
+
 namespace Pandape.Application;
 
 public static class OurServiceLocator

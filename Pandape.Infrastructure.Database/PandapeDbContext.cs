@@ -1,10 +1,4 @@
-﻿using Microsoft.EntityFrameworkCore;
-using Pandape.Infrastructure.Database.TypeConfigurations;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Pandape.Infrastructure.Database.TypeConfigurations;
 
 namespace Pandape.Infrastructure.Database;
 

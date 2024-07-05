@@ -23,6 +23,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pandape.Infrastructure.Doma
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pandape.Application.Tests", "Pandape.Application.Tests\Pandape.Application.Tests.csproj", "{0596CEAB-C43C-421B-8C00-D8162750F8F4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pandape.Domain.Tests", "Pandape.Domain.Tests\Pandape.Domain.Tests.csproj", "{AB8EA78E-5BD4-45AB-89CC-352C9E8BC7C4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -53,6 +55,10 @@ Global
 		{0596CEAB-C43C-421B-8C00-D8162750F8F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0596CEAB-C43C-421B-8C00-D8162750F8F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0596CEAB-C43C-421B-8C00-D8162750F8F4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AB8EA78E-5BD4-45AB-89CC-352C9E8BC7C4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AB8EA78E-5BD4-45AB-89CC-352C9E8BC7C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AB8EA78E-5BD4-45AB-89CC-352C9E8BC7C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AB8EA78E-5BD4-45AB-89CC-352C9E8BC7C4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -63,6 +69,7 @@ Global
 		{91C07422-CFC0-42CD-A73F-72CC73AA56FB} = {323B17C1-EF34-4F36-B435-E1DA51C773A8}
 		{27EF5C2C-F0C3-4C12-B5AA-6FEE15A27013} = {323B17C1-EF34-4F36-B435-E1DA51C773A8}
 		{0596CEAB-C43C-421B-8C00-D8162750F8F4} = {04C78B20-A6F2-4BA1-8B6E-38E26FBAF059}
+		{AB8EA78E-5BD4-45AB-89CC-352C9E8BC7C4} = {04C78B20-A6F2-4BA1-8B6E-38E26FBAF059}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {7469D49A-2511-4566-9484-CD60FB4FF41D}

@@ -1,0 +1,66 @@
+﻿@model CandidateExperienceViewModel
+
+@{
+    ViewData["Title"] = "Lista de Candidatos";
+}
+
+<h1>Experiencia de @Model.FullName</h1>
+
+<p>
+    <a asp-controller="Experience" asp-action="Create" asp-route-idCandidate="@Model.IdCandidate">Inscribir Experiencia</a>
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Compañía
+            </th>
+            <th>
+                Trabajo
+            </th>
+            <th>
+                Descripción
+            </th>
+            <th>
+                Salario
+            </th>
+            <th>
+                Fecha Entrada
+            </th>
+            <th>
+                Fecha Salida
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Experiences)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Company)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Job)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Description)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Salary)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.BeginDate)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.EndDate)
+                </td>
+                <td>
+                    <a asp-controller="Experience" asp-action="Update" asp-route-idCandidate="@Model.IdCandidate" asp-route-idExperience="@item.IdCandidateExperience">Editar</a> |
+                    <a asp-controller="Experience" asp-action="Delete" asp-route-idCandidate="@Model.IdCandidate" asp-route-idExperience="@item.IdCandidateExperience">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

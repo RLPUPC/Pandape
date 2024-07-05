@@ -1,12 +1,4 @@
-﻿using Microsoft.EntityFrameworkCore.ChangeTracking;
-using Pandape.Infrastructure.Domain.Dto;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Pandape.Infrastructure.Database.Repository
+﻿namespace Pandape.Infrastructure.Database.Repository
 {
     public class UnitOfWork : IUnitOfWork
     {
@@ -51,6 +43,7 @@ namespace Pandape.Infrastructure.Database.Repository
                 
             }
         }
+
         #endregion
 
         #region EFPrivates

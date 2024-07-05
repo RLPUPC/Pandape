@@ -18,6 +18,7 @@
   <ItemGroup>
     <ProjectReference Include="..\Pandape.Infrastructure.Database\Pandape.Infrastructure.Database.csproj" />
     <ProjectReference Include="..\Pandape.Infrastructure.Domain.Dto\Pandape.Infrastructure.Domain.Dto.csproj" />
+    <ProjectReference Include="..\PandapeApplication\Pandape.Application.csproj" />
   </ItemGroup>
 
 </Project>

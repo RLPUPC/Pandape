@@ -1,13 +1,8 @@
 ﻿using Microsoft.Extensions.Configuration;
 using Pandape.Infrastructure.Database.TypeConfigurations;
 using Pandape.Infrastructure.Database;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace Pandape.Application.Tests;
+namespace Pandape.Application;
 
 [SetUpFixture]
 public class SetUp

@@ -1,6 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Identity.Client;
+using Pandape.Application;
 using Pandape.Infrastructure.Database;
 using Pandape.Infrastructure.Database.Repository;
 using Pandape.Infrastructure.Database.TypeConfigurations;
@@ -28,10 +27,13 @@ public class StartUp
             options.UseSqlServer(dbConnectionString);
         });
 
-
         services.AddScoped<IUnitOfWork, UnitOfWork>();
 
         services.AddControllersWithViews();
+
+        services.AddScoped<ICandidateManager, CandidateManager>();
+        services.AddScoped<IExperiencesManager, ExperiencesManager>();
+        services.AddScoped<IClockManager, ClockManager>();
     }
 
     public void Configure(WebApplication app) 
@@ -59,6 +61,6 @@ public class StartUp
 
         app.MapControllerRoute(
             name: "default",
-            pattern: "{controller=Home}/{action=Index}/{id?}");
+            pattern: "{controller=Candidate}/{action=Index}/{id?}");
     }
 }

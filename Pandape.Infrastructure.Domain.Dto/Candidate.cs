@@ -18,5 +18,5 @@ public class Candidate
     public DateTime? ModifyDate { get; set; }
 
 
-    public virtual ICollection<CandidateExperience>? Experiences { get; set; }
+    public virtual ICollection<CandidateExperience> Experiences { get; set; } = new List<CandidateExperience>();
 }
