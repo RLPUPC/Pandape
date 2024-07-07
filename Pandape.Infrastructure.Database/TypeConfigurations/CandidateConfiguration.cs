@@ -13,8 +13,8 @@ public class CandidateConfiguration: IEntityTypeConfiguration<Candidate>, IEntit
     public void Configure(EntityTypeBuilder<Candidate> builder) 
     {
         builder.HasKey(e => new { e.IdCandidate });
-        //builder.HasAlternateKey(e => e.Email); /Esta comentado dado que esto crea que la variable sea solo readonly y obligaría a utilizar un query sql
-        //Se crea un indice y se especifica que puede ser único, que cumple la misma fúncion que un alternative key
+        //builder.HasAlternateKey(e => e.Email); Esta comentado dado que esto crea que la variable sea solo readonly y obligaría a utilizar un query sql
+        //Se crea un indice y se especifica que debe ser único, esto cumple la misma funcion que un alternative key
         //De esta forma podemos hacer un Update sin utilizar querys SQL
         builder.HasIndex(e => e.Email)
             .IsUnique();

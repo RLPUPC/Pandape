@@ -1,5 +1,4 @@
 ﻿using Pandape.Domain.Dto;
-using Pandape.Infrastructure.Domain.Dto;
 
 namespace Pandape.Application.CandidateTests;
 

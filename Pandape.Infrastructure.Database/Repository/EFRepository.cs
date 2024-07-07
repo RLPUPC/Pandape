@@ -1,6 +1,4 @@
-﻿using Pandape.Infrastructure.Domain.Dto;
-
-namespace Pandape.Infrastructure.Database.Repository;
+﻿namespace Pandape.Infrastructure.Database.Repository;
 
 public class EFRepository<T> : IRepository<T> where T : class
 {

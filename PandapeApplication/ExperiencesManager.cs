@@ -1,6 +1,4 @@
-﻿using Pandape.Infrastructure.Domain.Dto;
-
-namespace Pandape.Application;
+﻿namespace Pandape.Application;
 
 public class ExperiencesManager: IExperiencesManager
 {

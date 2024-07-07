@@ -1,6 +1,4 @@
-﻿using Microsoft.IdentityModel.Tokens;
-
-namespace Pandape.Application.CandidateExperienceTests;
+﻿namespace Pandape.Application.CandidateExperienceTests;
 
 [TestFixture]
 public class DeleteExperienceTests: BaseCandidateExtensionManagerTests

@@ -15,18 +15,22 @@ public class CandidateExperienceDto
 
     public override string ToString()
     {
-        var strExperiences = !Experiences.IsNullOrEmpty() ? $", Experiences {Experiences.Select(x => x.ToString()).Aggregate((x, y) => $"{x} {y}")}" : string.Empty;
+        //Añado el Experiences != null para eliminar el warning
+        var strExperiences = Experiences != null && !Experiences.IsNullOrEmpty() ? $", Experiences {Experiences.Select(x => x.ToString()).Aggregate((x, y) => $"{x} {y}")}" : string.Empty;
         return $"CandidateExperienceDto (FullName {FullName}, IdCandidate {IdCandidate}{strExperiences} )";
     }
 
-    public override bool Equals(object obj) 
+
+    public override bool Equals(object? obj)
     {
         if (obj == null) return false;
         if(obj.GetType() != GetType()) return false; 
         var toCompare = (CandidateExperienceDto)obj;
         return ((FullName == null) == (toCompare.FullName == null)) && (FullName == null || FullName.Equals(toCompare.FullName)) &&
             (IdCandidate == toCompare.IdCandidate) &&
+#pragma warning disable CS8604
             ((Experiences == null) == (toCompare.Experiences == null)) && (Experiences == null || Experiences.SequenceEqual(toCompare.Experiences));
+#pragma warning restore CS8604
 
     }
 }
