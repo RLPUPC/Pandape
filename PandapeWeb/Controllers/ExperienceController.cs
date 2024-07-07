@@ -27,7 +27,7 @@ namespace PandapeWeb.Controllers
         [HttpPost]
         public IActionResult Create(CreateExperienceViewModel createExperience)
         {
-            /*if (ModelState.IsValid)
+            if (ModelState.IsValid)
             {
                 var newExperience = new CreateCandidateExperienceVO
                 {
@@ -38,16 +38,16 @@ namespace PandapeWeb.Controllers
                     EndDate = DateTime.Now,
                     Salary = createExperience.Salary,
                 };
-                _experiencesManager.CreateExperience(createExperience.IdCandidate, newExperience);*/
+                _experiencesManager.CreateExperience(createExperience.IdCandidate, newExperience);
                 return RedirectToAction("ExperiencesByCandidate", "Candidate", new { idCandidate = createExperience.IdCandidate });
-            //}
-            //return View(createExperience);
+            }
+            return View(createExperience);
         }
 
         [HttpGet]
-        public IActionResult Update(int idCandidate)
+        public IActionResult Update(int idExperience)
         {
-            var experience = _experiencesManager.GetExperienceById(idCandidate);
+            var experience = _experiencesManager.GetExperienceById(idExperience);
             return View(new UpdateExperienceViewModel
             {
                 IdExperience = experience.IdCandidateExperience,
@@ -60,7 +60,7 @@ namespace PandapeWeb.Controllers
         }
 
         [HttpPost]
-        public IActionResult Update(int idCanidate, UpdateExperienceViewModel updateExperience)
+        public IActionResult Update(UpdateExperienceViewModel updateExperience)
         {
             if (ModelState.IsValid)
             {
@@ -71,13 +71,13 @@ namespace PandapeWeb.Controllers
                     EndDate = DateTime.Now,
                     Salary = updateExperience.Salary,
                 };
-                _experiencesManager.UpdateExperience(idCanidate, updateExperience.IdExperience, experience);
-                return RedirectToAction("Candidate", "ExperiencesByCandidate", new { idCandidate = idCanidate });
+                _experiencesManager.UpdateExperience(updateExperience.IdCandidate, updateExperience.IdExperience, experience);
+                return RedirectToAction("ExperiencesByCandidate", "Candidate", new { idCandidate = updateExperience.IdCandidate });
             }
             return View(updateExperience);
         }
 
-        [HttpDelete]
+        [HttpPost]
         public IActionResult Delete(int idCandidate, int idExperience)
         {
             _experiencesManager.DeleteExperience(idExperience);

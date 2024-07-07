@@ -46,7 +46,7 @@
                 </td>
                 <td>
                     <a asp-controller="Candidate" asp-action="Update" asp-route-idCandidate="@item.IdCandidate">Editar</a> |
-                    <a asp-controller="Candidate" asp-action="Delete" asp-route-idCandidate="@item.IdCandidate">Eliminar</a> |
+                    <a href="#" onclick="deleteCandidate(@item.IdCandidate)">Eliminar</a> |
                     <a asp-controller="Candidate" asp-action="ExperiencesByCandidate" asp-route-idCandidate="@item.IdCandidate">Experiencia</a>
                 </td>
             </tr>
